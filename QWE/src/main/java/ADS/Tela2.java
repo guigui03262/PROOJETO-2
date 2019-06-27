@@ -8,8 +8,12 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 
@@ -19,6 +23,7 @@ public class Tela2 extends Application {
 	private Button Voltar, Sair;
 	private Alert alert;
 	private static Stage stage;
+	private Label LB1;
 	
 	@Override
 	public void start(Stage stage) throws Exception {
@@ -28,14 +33,12 @@ public class Tela2 extends Application {
 		
 		Scene scene = new Scene(pane);
 		
-		
 		stage.setScene(scene);
 		stage.setTitle("T2");
 		stage.show();
 		initLayout();
 		Tela2.stage = stage;
        
-	
 		
 		 
 	}
@@ -52,17 +55,29 @@ public class Tela2 extends Application {
 		private void initComponents() {
 		
 			
+			
+			
 			pane = new AnchorPane();
 			pane.setPrefSize(800, 600);
 			pane.setStyle("-fx-background-color: linear-gradient(to right, rgba(0,45,666,2), rgba(0,0,555,1));");
+			
 			Voltar = new Button("		Voltar		");
 			Voltar.getStyleClass().add("Voltar");
 			Sair = new Button("		Sair			");
 			Sair.getStyleClass().add("Sair");
 			
+			Image F = new Image("https://vignette.wikia.nocookie.net/dwai/images/5/57/Blombo_the_Big_Blobman_Boi.png/revision/latest?cb=20170619234405", 500, 500, true, false);
+	        ImageView IF = new ImageView(F);
+	        IF.setTranslateX(100);
+	        IF.setTranslateY(0);
 			
+	        
+	        LB1 = new Label("BLombo 2019");
+			LB1.setFont(Font.font ("Verdana", 50));
+			LB1.setTranslateX(100);
+			LB1.setTranslateY(400);
 			
-			pane.getChildren().addAll(Voltar, Sair);
+			pane.getChildren().addAll(IF, Voltar, Sair, LB1);
 
 		}
 		
