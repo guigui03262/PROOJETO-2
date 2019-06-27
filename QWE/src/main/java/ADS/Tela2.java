@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Alert.AlertType;
@@ -76,8 +77,10 @@ public class Tela2 extends Application {
 			LB1.setFont(Font.font ("Verdana", 50));
 			LB1.setTranslateX(100);
 			LB1.setTranslateY(400);
-			
-			pane.getChildren().addAll(IF, Voltar, Sair, LB1);
+			Label rotuloDemo = new Label("SLOGAN"); // 3
+			  rotuloDemo.setTooltip(new Tooltip(
+			    "textin")); // 4
+			pane.getChildren().addAll(IF, Voltar, Sair, LB1,rotuloDemo);
 
 		}
 		

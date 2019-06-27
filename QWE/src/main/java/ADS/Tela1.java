@@ -10,6 +10,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
+
 import javafx.stage.Stage;
 
 
@@ -90,7 +91,7 @@ public class Tela1 extends Application {
 			T7.getStyleClass().add("T7");
 			T8 = new Button("		Lu Renata		");
 			T8.getStyleClass().add("T8");
-			T9 = new Button("		Tela9		");
+			T9 = new Button("		VIDEO HISTORIA ARTES PLASTICAS		");
 			T9.getStyleClass().add("T9");
 			T10 = new Button("		Comentarios		");
 			T10.getStyleClass().add("T10");
