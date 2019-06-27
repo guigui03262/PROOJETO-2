@@ -28,7 +28,7 @@ public class Tela10 extends Application {
 
   Label rotuloDemo = new Label("Comente o que pode ser melhorado"); // 3
   rotuloDemo.setTooltip(new Tooltip(
-    "Esse é um rótulo para mostrar textos de forma simples")); // 4
+    "textin")); // 4
 
   TextField campoTexto = new TextField("Titulo"); // 5
   campoTexto.setTooltip(new Tooltip(
@@ -45,7 +45,7 @@ public class Tela10 extends Application {
   deslizante.setShowTickMarks(true); // 11
   deslizante
     .setTooltip(new Tooltip(
-      "O controle deslizante tem um valor numérico de acordo com sua posição"));
+      "uhullll"));
 
   raiz.getChildren().addAll(rotuloDemo, campoTexto, areaTexto,
     separadorVertical, separadorHorizontal, deslizante);

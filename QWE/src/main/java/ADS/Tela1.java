@@ -86,9 +86,9 @@ public class Tela1 extends Application {
 			T5.getStyleClass().add("T5");
 			T6 = new Button("		Contato		");
 			T6.getStyleClass().add("T6");
-			T7 = new Button("		Tela7		");
+			T7 = new Button("		Silvana Macêdo		");
 			T7.getStyleClass().add("T7");
-			T8 = new Button("		Tela8		");
+			T8 = new Button("		Lu Renata		");
 			T8.getStyleClass().add("T8");
 			T9 = new Button("		Tela9		");
 			T9.getStyleClass().add("T9");
@@ -119,6 +119,10 @@ public class Tela1 extends Application {
 			public void handle(ActionEvent arg0) {
 				try {
 					new Main().start(new Stage());
+					alert = new Alert(AlertType.WARNING);
+			        alert.setTitle("VOLTANDO");
+			        alert.setHeaderText("VOLTEI MEU IRMAO.");
+			        alert.setContentText("EH NOIS");
 						Tela1.stage.close();
 					} catch (Exception e) {
 						e.printStackTrace();}
@@ -128,6 +132,10 @@ public class Tela1 extends Application {
 				public void handle(ActionEvent arg0) {
 					try {
 						new Tela2().start(new Stage());
+						alert = new Alert(AlertType.WARNING);
+				        alert.setTitle("Bem Vindo a BLOMO");
+				        alert.setHeaderText("MEU IRMAO.");
+				        alert.setContentText("EH NOIS");
 							Tela1.stage.close();
 						} catch (Exception e) {
 							e.printStackTrace();}

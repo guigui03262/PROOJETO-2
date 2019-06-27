@@ -73,6 +73,10 @@ public class Main extends Application {
 			btEntrar.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent arg0) {
 				try {
+					alert = new Alert(AlertType.WARNING);
+			        alert.setTitle("Bem Vindo a BLOMO");
+			        alert.setHeaderText("MEU IRMAO.");
+			        alert.setContentText("EH NOIS");
 					new Tela1().start(new Stage());
 						Main.stage.close();
 					} catch (Exception e) {
