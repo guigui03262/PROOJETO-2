@@ -3,84 +3,56 @@ package ADS;
 
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.geometry.Orientation;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.Label;
+import javafx.scene.control.Separator;
+import javafx.scene.control.Slider;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
 
 public class Tela10 extends Application {
 
-	private AnchorPane pane;
-	private Button Voltar, Sair;
-	private Alert alert;
-	private static Stage stage;
-	
-	@Override
-	public void start(Stage stage) throws Exception {
-		
-		initComponents();
-		A();
-		Scene scene = new Scene(pane);
-		stage.setScene(scene);
-		stage.setTitle("T10");
-		stage.show();
-		initLayout();
-		Tela10.stage = stage;
-       
-	
-	}
-		private void initLayout() {
-			
-			Voltar.setLayoutX((pane.getWidth() - Voltar.getWidth()) / 9);
-			Voltar.setLayoutY(500);
-			
-			Sair.setLayoutX((pane.getWidth() - Sair.getWidth()) / 9);
-			Sair.setLayoutY(550);
-		
-	}
-		
-		private void initComponents() {
-		
-			pane = new AnchorPane();
-			pane.setPrefSize(800, 600);
-			pane.setStyle("-fx-background-color: linear-gradient(to right, rgba(0,45,666,2), rgba(0,0,555,1));");
-			Voltar = new Button("		Voltar		");
-			Voltar.getStyleClass().add("Voltar");
-			Sair = new Button("		Sair			");
-			Sair.getStyleClass().add("Sair");
-			
-			pane.getChildren().addAll(Voltar, Sair);
+ public static void main(String[] args) {
+  launch();
+ }
 
-		}
-		
-		private void A() {
-			Sair.setOnAction(new EventHandler<ActionEvent>() {
-				public void handle(ActionEvent arg0) {
-					alert = new Alert(AlertType.WARNING);
-			        alert.setTitle("AVISO");
-			        alert.setHeaderText("SAINDO AQUI MEU IRMAO.");
-			        alert.setContentText("FLWSS");
-			        alert.showAndWait();
-					System.exit(0);
-				}
-			});
-		
-			Voltar.setOnAction(new EventHandler<ActionEvent>() {
-			public void handle(ActionEvent arg0) {
-				try {
-					new Tela1().start(new Stage());
-						Tela10.stage.close();
-					} catch (Exception e) {
-						e.printStackTrace();}
-					}});
-		}
-			
-		public static void main(String[] args) {
-			launch(args);
-		}
+ @Override
+ public void start(Stage palco) throws Exception {
+  VBox raiz = new VBox(10); // 1
+  raiz.setAlignment(Pos.CENTER); // 2
+
+  Label rotuloDemo = new Label("Comente o que pode ser melhorado"); // 3
+  rotuloDemo.setTooltip(new Tooltip(
+    "Esse é um rótulo para mostrar textos de forma simples")); // 4
+
+  TextField campoTexto = new TextField("Titulo"); // 5
+  campoTexto.setTooltip(new Tooltip(
+    "DIgite "));
+
+  TextArea areaTexto = new TextArea("Digite ... "); // 6
+  areaTexto.setTooltip(new Tooltip(
+    "Digite"));
+
+  Separator separadorHorizontal = new Separator(); // 7
+  Separator separadorVertical = new Separator(Orientation.VERTICAL); // 8
+  Slider deslizante = new Slider(); // 9
+  deslizante.setShowTickLabels(true); // 10
+  deslizante.setShowTickMarks(true); // 11
+  deslizante
+    .setTooltip(new Tooltip(
+      "O controle deslizante tem um valor numérico de acordo com sua posição"));
+
+  raiz.getChildren().addAll(rotuloDemo, campoTexto, areaTexto,
+    separadorVertical, separadorHorizontal, deslizante);
+
+  Scene cena = new Scene(raiz, 300, 400);
+  palco.setTitle("Coments");
+  palco.setScene(cena);
+  palco.show();
+ }
 }

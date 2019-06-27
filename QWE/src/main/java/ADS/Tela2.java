@@ -25,7 +25,10 @@ public class Tela2 extends Application {
 		
 		initComponents();
 		A();
+		
 		Scene scene = new Scene(pane);
+		
+		
 		stage.setScene(scene);
 		stage.setTitle("T2");
 		stage.show();
@@ -33,6 +36,8 @@ public class Tela2 extends Application {
 		Tela2.stage = stage;
        
 	
+		
+		 
 	}
 		private void initLayout() {
 			
@@ -46,6 +51,7 @@ public class Tela2 extends Application {
 		
 		private void initComponents() {
 		
+			
 			pane = new AnchorPane();
 			pane.setPrefSize(800, 600);
 			pane.setStyle("-fx-background-color: linear-gradient(to right, rgba(0,45,666,2), rgba(0,0,555,1));");
@@ -53,6 +59,8 @@ public class Tela2 extends Application {
 			Voltar.getStyleClass().add("Voltar");
 			Sair = new Button("		Sair			");
 			Sair.getStyleClass().add("Sair");
+			
+			
 			
 			pane.getChildren().addAll(Voltar, Sair);
 

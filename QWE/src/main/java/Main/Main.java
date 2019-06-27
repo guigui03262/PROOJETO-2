@@ -31,6 +31,7 @@ public class Main extends Application {
 		stage.setTitle("BBZ");
 		stage.show();
 		initLayout();
+		stage.setResizable(false);
 		Main.stage = stage;
        
 	

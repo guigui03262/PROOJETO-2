@@ -78,7 +78,7 @@ public class Tela1 extends Application {
 			pane.setStyle("-fx-background-color: linear-gradient(to right, rgba(0,45,666,2), rgba(0,0,555,1));");
 			T2 = new Button("		Tela2		");
 			T2.getStyleClass().add("T2");
-			T3 = new Button("		Tela3		");
+			T3 = new Button("		INFORMACOES		");
 			T3.getStyleClass().add("T3");
 			T4 = new Button("		Tela4		");
 			T4.getStyleClass().add("T4");
@@ -92,7 +92,7 @@ public class Tela1 extends Application {
 			T8.getStyleClass().add("T8");
 			T9 = new Button("		Tela9		");
 			T9.getStyleClass().add("T9");
-			T10 = new Button("		Tela10		");
+			T10 = new Button("		Comentarios		");
 			T10.getStyleClass().add("T10");
 			Voltar = new Button("		Voltar		");
 			Voltar.getStyleClass().add("Voltar");
