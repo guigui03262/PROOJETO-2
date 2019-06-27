@@ -82,7 +82,7 @@ public class Tela1 extends Application {
 			T3.getStyleClass().add("T3");
 			T4 = new Button("		Michelangelo Donatello		");
 			T4.getStyleClass().add("T4");
-			T5 = new Button("		Tela5		");
+			T5 = new Button("		Clarissa Borges ");
 			T5.getStyleClass().add("T5");
 			T6 = new Button("		Tela6		");
 			T6.getStyleClass().add("T6");
