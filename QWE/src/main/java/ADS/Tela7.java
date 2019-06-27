@@ -31,8 +31,8 @@ public class Tela7 extends Application {
 		stage.show();
 		initLayout();
 		Tela7.stage = stage;
-       
-	
+		
+
 	}
 		private void initLayout() {
 			

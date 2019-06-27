@@ -22,7 +22,7 @@ public class Tela6 extends Application {
 	private AnchorPane pane;
 	private Alert alert;
 	private Button Voltar, Sair;
-	private Label LB1, LB2, LB3;
+	private Label LB1, LB2;
 	private static Stage stage;
 	
 	@Override
@@ -66,13 +66,17 @@ public class Tela6 extends Application {
 			LB1.setTranslateX(80);
 			LB1.setTranslateY(300);
 			
+			LB2 = new Label("R. Aníbal de Mendonça," + "\n" + " 27 - Ipanema, " + " \n" + "Rio de Janeiro - RJ, 22410-050");
+			LB2.setFont(Font.font ("Verdana", 20));
+			LB2.setTranslateX(50);
+			LB2.setTranslateY(400);
 			
-			Image F = new Image("http://teamoanapolis.portal6.com.br/wp-content/uploads/2017/10/museu.jpg", 500, 300, true, false);
+			Image F = new Image("http://teamoanapolis.portal6.com.br/wp-content/uploads/2017/10/museu.jpg", 450, 300, true, false);
 	        ImageView IF = new ImageView(F);
-	        IF.setTranslateX(150);
-	        IF.setTranslateY(30);
+	        IF.setTranslateX(60);
+	        IF.setTranslateY(100);
 			
-			pane.getChildren().addAll(IF, Voltar, Sair, LB1);
+			pane.getChildren().addAll(IF, Voltar, Sair, LB1, LB2);
 
 		}
 		
